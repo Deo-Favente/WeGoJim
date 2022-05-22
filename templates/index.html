@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
+    <title>WeGoJim - Carnet de musculation en ligne</title>
+</head>
+
+<body>
+    <!-- Banderole -->
+    <header>
+        <img class="buttons" src="static/img/list.png">
+        <div class="logo">
+            <img src="static/img/muscle.png">
+            <a>WEGOJIM</a>
+        </div>
+        <img class="buttons" src="static/img/user.png">
+    </header>
+
+    <!-- Titre et sous-titre -->
+    <h1>BIENVENUE, {Name} 🤩</h1>
+    <h2>Lancez votre séance et le site se charge du reste !</h2>
+
+    <!-- Boxe -->
+    <section class="seances">
+        <div class="box">
+            <a>Séance 1 : Legs</a>
+            <a class="greenbtn"> C'est parti !</a>
+        </div>
+        <div class="box">
+            <a>Séance 2 : Push</a>
+            <a class="greenbtn"> C'est parti !</a>
+        </div>
+        <div class="box">
+            <a>Séance 3 : Pull</a>
+            <a class="greenbtn"> C'est parti !</a>
+        </div>
+    </section>
+</body>
+
+</html>
