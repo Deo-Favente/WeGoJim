@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
     <title>WeGoJim - Carnet de musculation en ligne</title>
 </head>
@@ -13,12 +14,12 @@
 <body>
     <!-- Banderole -->
     <header>
-        <img class="buttons" src="static/img/list.png">
+        <img class="buttons" src="../static/img/list.png">
         <div class="logo">
-            <img src="static/img/muscle.png">
+            <img src="../static/img/muscle.png">
             <a>WEGOJIM</a>
         </div>
-        <img class="buttons" src="static/img/user.png">
+        <img class="buttons" src="../static/img/user.png">
     </header>
 
     <!-- Titre et sous-titre -->
@@ -29,16 +30,26 @@
     <section class="seances">
         <div class="box">
             <a>Séance 1 : Legs</a>
-            <a class="greenbtn"> C'est parti !</a>
+            <a class="greenbtn">Ouvrir</a>
         </div>
         <div class="box">
             <a>Séance 2 : Push</a>
-            <a class="greenbtn"> C'est parti !</a>
+            <a class="greenbtn">Ouvrir</a>
         </div>
         <div class="box">
             <a>Séance 3 : Pull</a>
-            <a class="greenbtn"> C'est parti !</a>
+            <a class="greenbtn">Ouvrir</a>
         </div>
+        <div class="box">
+            <a>Personnal Records</a>
+            <a class="greenbtn">Ouvrir</a>
+        </div>
+    </section>
+
+    <section class="btns">
+        <a class="greenbtn">Créer une séance</a>
+        <a class="orangebtn">Modifier une séance</a>
+        <a class="redbtn">Supprimer une séance</a>
     </section>
 </body>
 

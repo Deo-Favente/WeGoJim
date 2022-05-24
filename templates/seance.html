@@ -1,0 +1,60 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
+    <title>WeGoJim - Carnet de musculation en ligne</title>
+</head>
+
+<body>
+    <!-- Banderole -->
+    <header>
+        <img class="buttons" src="../static/img/list.png">
+        <div class="logo">
+            <img src="../static/img/muscle.png">
+            <a>WEGOJIM</a>
+        </div>
+        <img class="buttons" src="../static/img/user.png">
+    </header>
+
+    <!-- Titre et sous-titre -->
+    <section class="title">
+        <div>
+            <h1>SÉANCE 1 : PUSH 🏋️</h1>
+            <h2>Pectoraux, épaules, triceps</h2>
+        </div>
+        <a class="greenbtn">Commencer</a>
+    </section>
+
+</body>
+<section class="prog">
+    <table>
+        <thead>
+            <tr>
+                <th class="exo">Exercice</th>
+                <th class="other">Instructions</th>
+                <th class="other">Charge</th>
+                <th class="other">Reps</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for k,v in exos.items()%}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{v[0]}}</td>
+                <td>{{v[1]}}</td>
+                <td>{{v[2]}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</section>
+<section class="btns">
+    <a class="greenbtn">Échauffements / Étirements</a>
+    <a class="greenbtn">Ouvrir le chronomètre</a>
+    <a class="greenbtn">Exporter la séance</a>
+</section>
+
+</html>
