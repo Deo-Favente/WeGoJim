@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -16,9 +16,15 @@ Exos = {
 def index():
     return render_template('index.html')
 
-@app.route('/push')
-def seances():
+@app.route("/push/", methods=['POST'])
+def push():
+    if request.method == "POST":
+        exo = request.form['exo']
+        instructions = request.form['instructions']       
+        charge = request.form['charge']
+        reps = request.form['reps']
+        print(exo, instructions, charge, reps)
     return render_template('seance.html', exos=Exos)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True)
