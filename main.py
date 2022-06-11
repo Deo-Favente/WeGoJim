@@ -19,11 +19,11 @@ def index():
 @app.route("/push/", methods=['POST'])
 def push():
     if request.method == "POST":
-        exo = request.form['exo']
-        instructions = request.form['instructions']       
-        charge = request.form['charge']
-        reps = request.form['reps']
-        print(exo, instructions, charge, reps)
+        exo = request.form.get('exercice')
+        instructions = request.form.get('instructions')       
+        charge = request.form.get('charge')
+        reps = request.form.get('reps')
+        Exos[exo] = (instructions, charge, reps)
     return render_template('seance.html', exos=Exos)
 
 if __name__ == "__main__":

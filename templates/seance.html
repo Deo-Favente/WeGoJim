@@ -44,7 +44,7 @@
             <tbody>
                 {% for k,v in exos.items()%}
                 <tr>
-                    <td><input type="text" name="exo" value="{{k}}"></td>
+                    <td><input type="text" id="save" value="{{k}}" name="exercice"></td>
                     <td><input type="text" id="save" value="{{v[0]}}" name="instructions"></td>
                     <td><input type="text" id="save" value="{{v[1]}}" name="charge"></td>
                     <td><input type="text" id="save" value="{{v[2]}}" name="reps"></td>        
